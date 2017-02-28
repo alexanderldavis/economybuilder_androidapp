@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="1"
+    android:rowCount="3"
+    tools:context="com.example.davial02.economybuilder.MainActivity">
+
+    <TextView
+        android:text=""
+        android:layout_height="25dp"
+        android:textAlignment="center"
+        android:layout_gravity="fill_vertical"
+        android:textAllCaps="true"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+        android:layout_width="match_parent" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="fill_vertical"
+        android:columnCount="2"
+        android:rowCount="3">
+
+        <!--MILITARY LAYOUT-->
+        <GridLayout
+            android:layout_width="195dp"
+            android:layout_height="200dp"
+
+            android:columnCount="1"
+            android:background="@color/happy_background"
+            android:rowCount="2">
+
+            <GridLayout
+                android:columnCount="2"
+                android:rowCount="1">
+                <TextView
+                    android:text="@string/military"/>
+
+                <Button
+                    android:id="@+id/clear_all_military"
+                    android:text="@string/clear" />
+
+            </GridLayout>
+
+            <GridLayout
+                android:columnCount="1"
+                android:rowCount="3">
+
+                <!--Sm Units Chooser-->
+                <GridLayout
+                    android:layout_gravity="fill_vertical"
+                    android:columnCount="4"
+                    android:rowCount="1">
+
+                    <Button
+                        android:id="@+id/decrease_sm_units"
+                        android:layout_height="wrap_content"
+                        android:text="@string/decrease"
+                        android:layout_width="50dp"/>
+
+                    <TextView
+                        android:text=""
+                        android:layout_width="25dp"
+                        android:gravity="center"
+                        android:id="@+id/sm_unit_val" />
+
+
+                    <Button
+                        android:id="@+id/increase_sm_units"
+                        android:text="@string/increase"
+                        android:layout_width="50dp"/>
+
+                    <TextView
+                        android:text="@string/sm_units"
+                        android:id="@+id/sm_unit_label" />
+                </GridLayout>
+
+                <!--Med Units Chooser-->
+                <GridLayout
+                    android:layout_gravity="fill_vertical"
+                    android:columnCount="4"
+                    android:rowCount="1">
+
+                    <Button
+                        android:id="@+id/decrease_med_units"
+                        android:layout_height="wrap_content"
+                        android:text="@string/decrease"
+                        android:layout_width="50dp"/>
+
+                    <TextView
+                        android:text=""
+                        android:layout_width="25dp"
+                        android:gravity="center"
+                        android:id="@+id/med_unit_val" />
+
+
+                    <Button
+                        android:id="@+id/increase_med_units"
+                        android:text="@string/increase"
+                        android:layout_width="50dp"/>
+
+                    <TextView
+                        android:text="@string/med_units"
+                        android:id="@+id/med_unit_label" />
+                </GridLayout>
+
+                <!--Lg Units Chooser-->
+                <GridLayout
+                    android:layout_gravity="fill_vertical"
+                    android:columnCount="4"
+                    android:rowCount="1">
+
+                    <Button
+                        android:id="@+id/decrease_lg_units"
+                        android:layout_height="wrap_content"
+                        android:text="@string/decrease"
+                        android:layout_width="50dp"/>
+
+                    <TextView
+                        android:text=""
+                        android:layout_width="25dp"
+                        android:gravity="center"
+                        android:id="@+id/lg_unit_val" />
+
+                    <Button
+                        android:id="@+id/increase_lg_units"
+                        android:text="@string/increase"
+                        android:layout_width="50dp" />
+
+                    <TextView
+                        android:text="@string/lg_units"
+                        android:id="@+id/lg_unit_label" />
+                </GridLayout>
+            </GridLayout>
+        </GridLayout>
+
+        <!--ECONOMY LAYOUT-->
+        <GridLayout
+            android:layout_width="195dp"
+            android:layout_height="200dp"
+            android:columnCount="1"
+            android:background="@color/neutral_background"
+            android:rowCount="2">
+
+            <GridLayout
+                android:columnCount="2"
+                android:rowCount="1">
+                <TextView
+                    android:text="@string/economy"/>
+
+                <Button
+                    android:id="@+id/clear_all_economy"
+                    android:text="@string/clear" />
+
+            </GridLayout>
+
+            <GridLayout
+                android:columnCount="1"
+                android:rowCount="3">
+
+                <!--Subsidies Chooser-->
+                <GridLayout
+                    android:layout_gravity="fill_vertical"
+                    android:columnCount="4"
+                    android:rowCount="1">
+
+                    <Button
+                        android:id="@+id/decrease_social_funding"
+                        android:layout_height="wrap_content"
+                        android:text="@string/decrease"
+                        android:layout_width="50dp"/>
+
+                    <TextView
+                        android:text=""
+                        android:layout_width="25dp"
+                        android:gravity="center"
+                        android:id="@+id/social_funding_val" />
+
+
+                    <Button
+                        android:id="@+id/increase_social_funding"
+                        android:text="@string/increase"
+                        android:layout_width="50dp"/>
+
+                    <TextView
+                        android:text="@string/social_funding"
+                        android:id="@+id/social_funding_label" />
+                </GridLayout>
+
+                <!--Tax Break Chooser-->
+                <GridLayout
+                    android:layout_gravity="fill_vertical"
+                    android:columnCount="4"
+                    android:rowCount="1">
+
+                    <Button
+                        android:id="@+id/decrease_taxbreaks"
+                        android:layout_height="wrap_content"
+                        android:text="@string/decrease"
+                        android:layout_width="50dp"/>
+
+                    <TextView
+                        android:text=""
+                        android:layout_width="25dp"
+                        android:gravity="center"
+                        android:id="@+id/tax_break_val" />
+
+                    <Button
+                        android:id="@+id/increase_taxbreaks"
+                        android:text="@string/increase"
+                        android:layout_width="50dp"/>
+
+                    <TextView
+                        android:text="@string/tax_breaks"
+                        android:id="@+id/tax_break_label" />
+                </GridLayout>
+
+                <!--Pay Bribe-->
+                <GridLayout
+                    android:layout_gravity="fill_horizontal"
+                    android:columnCount="3"
+                    android:rowCount="1">
+
+                    <Button
+                        android:id="@+id/pay_bribe_economy"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="@string/bribe"/>
+
+                    <TextView
+                        android:text=""
+                        android:id="@+id/pay_bribe_economy_price_label" />
+                </GridLayout>
+            </GridLayout>
+        </GridLayout>
+
+        <!--POLITICAL LAYOUT-->
+        <GridLayout
+            android:layout_width="195dp"
+            android:layout_height="200dp"
+            android:columnCount="1"
+            android:background="@color/angry_background"
+            android:rowCount="2">
+
+            <GridLayout
+                android:columnCount="2"
+                android:rowCount="1">
+                <TextView
+                    android:text="@string/political"/>
+
+                <Button
+                    android:id="@+id/clear_all_political"
+                    android:text="@string/clear" />
+
+            </GridLayout>
+
+            <GridLayout
+                android:columnCount="1"
+                android:rowCount="3">
+
+                <!--Lobbyists Chooser-->
+                <GridLayout
+                    android:layout_gravity="fill_vertical"
+                    android:columnCount="4"
+                    android:rowCount="1">
+
+                    <Button
+                        android:id="@+id/decrease_lobbyists"
+                        android:layout_height="wrap_content"
+                        android:text="@string/decrease"
+                        android:layout_width="50dp"/>
+
+                    <TextView
+                        android:text=""
+                        android:layout_width="25dp"
+                        android:gravity="center"
+                        android:id="@+id/lobbyists_val" />
+
+                    <Button
+                        android:id="@+id/increase_lobbyists"
+                        android:text="@string/increase"
+                        android:layout_width="50dp"/>
+
+                    <TextView
+                        android:text="@string/lobbyists"
+                        android:id="@+id/arts_funding_label" />
+                </GridLayout>
+
+                <!--Politican Salary Chooser-->
+                <GridLayout
+                    android:layout_gravity="fill_vertical"
+                    android:columnCount="4"
+                    android:rowCount="1">
+
+                    <Button
+                        android:id="@+id/decrease_politician_salary"
+                        android:layout_height="wrap_content"
+                        android:text="@string/decrease"
+                        android:layout_width="50dp"/>
+
+                    <TextView
+                        android:text=""
+                        android:layout_width="25dp"
+                        android:gravity="center"
+                        android:id="@+id/politicial_salary_val" />
+
+
+                    <Button
+                        android:id="@+id/increase_politician_salary"
+                        android:text="@string/increase"
+                        android:layout_width="50dp"/>
+
+                    <TextView
+                        android:text="@string/politician_salary"
+                        android:id="@+id/politican_salary_label" />
+                </GridLayout>
+
+                <!--Pay Bribe-->
+                <GridLayout
+                    android:layout_gravity="fill_horizontal"
+                    android:columnCount="3"
+                    android:rowCount="1">
+
+                    <Button
+                        android:id="@+id/pay_bribe_political"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="@string/bribe"/>
+
+                    <TextView
+                        android:text=""
+                        android:id="@+id/pay_bribe_political_price_label" />
+                </GridLayout>
+            </GridLayout>
+        </GridLayout>
+
+        <!--SOCIAL LAYOUT-->
+        <GridLayout
+            android:layout_width="195dp"
+            android:layout_height="200dp"
+            android:columnCount="1"
+            android:background="@color/rebellious_background"
+            android:rowCount="2">
+
+            <GridLayout
+                android:columnCount="2"
+                android:rowCount="1">
+                <TextView
+                    android:text="@string/social"/>
+
+                <Button
+                    android:id="@+id/clear_all_social"
+                    android:text="@string/clear" />
+
+            </GridLayout>
+
+            <GridLayout
+                android:columnCount="1"
+                android:rowCount="3">
+
+                <!--Welfare Chooser-->
+                <GridLayout
+                    android:layout_gravity="fill_vertical"
+                    android:columnCount="4"
+                    android:rowCount="1">
+
+                    <Button
+                        android:id="@+id/decrease_welfare"
+                        android:layout_height="wrap_content"
+                        android:text="@string/decrease"
+                        android:layout_width="50dp"/>
+
+                    <TextView
+                        android:text=""
+                        android:layout_width="25dp"
+                        android:gravity="center"
+                        android:id="@+id/welfare_val" />
+
+
+                    <Button
+                        android:id="@+id/increase_welfare"
+                        android:text="@string/increase"
+                        android:layout_width="50dp"/>
+
+                    <TextView
+                        android:text="@string/welfare"
+                        android:id="@+id/welfare_label" />
+                </GridLayout>
+
+                <!--Education Chooser-->
+                <GridLayout
+                    android:layout_gravity="fill_vertical"
+                    android:columnCount="4"
+                    android:rowCount="1">
+
+                    <Button
+                        android:id="@+id/decrease_education"
+                        android:layout_height="wrap_content"
+                        android:text="@string/decrease"
+                        android:layout_width="50dp"/>
+
+                    <TextView
+                        android:text=""
+                        android:layout_width="25dp"
+                        android:gravity="center"
+                        android:id="@+id/education_val" />
+
+
+                    <Button
+                        android:id="@+id/increase_education"
+                        android:text="@string/increase"
+                        android:layout_width="50dp"/>
+
+                    <TextView
+                        android:text="@string/education"
+                        android:id="@+id/education_label" />
+                </GridLayout>
+            </GridLayout>
+        </GridLayout>
+
+    </GridLayout>
+
+    <!--PERSONAL GRID LAYOUT-->
+    <GridLayout
+        android:layout_gravity="fill_vertical"
+        android:columnCount="5"
+        android:rowCount="1">
+
+        <Button
+            android:id="@+id/decrease_personal_salary"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/decrease_salary"/>
+
+        <TextView
+            android:text=""
+            android:layout_width="25dp"
+            android:gravity="center"
+            android:id="@+id/personal_salary_val" />
+
+        <Button
+            android:id="@+id/increase_personal_salary"
+            android:layout_width="wrap_content"
+            android:text="@string/increase_salary"/>
+
+        <TextView
+            android:text="@string/personal"
+            android:id="@+id/personal_salary_label" />
+
+        <Button
+            android:id="@+id/restart"
+            android:layout_width="wrap_content"
+            android:text="@string/restart"/>
+    </GridLayout>
+
+</GridLayout>
