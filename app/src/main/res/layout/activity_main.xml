@@ -1,434 +1,579 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:columnCount="1"
-    android:rowCount="3"
+    android:orientation="vertical"
     tools:context="com.example.davial02.economybuilder.MainActivity">
 
     <TextView
-        android:text=""
-        android:layout_height="25dp"
+        android:text="0"
         android:textAlignment="center"
+        android:id="@+id/mainBudgetView"
         android:layout_gravity="fill_vertical"
         android:textAllCaps="true"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
-        android:layout_width="match_parent" />
-
-    <GridLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Top Row -->
+    <GridLayout
+        android:rowCount="2"
+        android:columnCount="1"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:layout_gravity="fill_vertical"
-        android:columnCount="2"
-        android:rowCount="3">
+        android:layout_width="match_parent">
 
-        <!--MILITARY LAYOUT-->
-        <GridLayout
-            android:layout_width="195dp"
-            android:layout_height="200dp"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="2">
 
-            android:columnCount="1"
-            android:background="@color/happy_background"
-            android:rowCount="2">
-
+            <!--MILITARY LAYOUT-->
             <GridLayout
-                android:columnCount="2"
-                android:rowCount="1">
-                <TextView
-                    android:text="@string/military"/>
-
-                <Button
-                    android:id="@+id/clear_all_military"
-                    android:text="@string/clear" />
-
-            </GridLayout>
-
-            <GridLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id = "@+id/militaryMainLayout"
                 android:columnCount="1"
-                android:rowCount="3">
+                android:background="@color/happy_background"
+                android:rowCount="2">
 
-                <!--Sm Units Chooser-->
-                <GridLayout
-                    android:layout_gravity="fill_vertical"
-                    android:columnCount="4"
-                    android:rowCount="1">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2">
+                    <TextView
+                        android:text="@string/military"
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/clear_all_military"
+                        android:text="@string/clear" />
+
+                </LinearLayout>
+
+                <!-- Sm. Unit Chooser START -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="4">
 
                     <Button
                         android:id="@+id/decrease_sm_units"
                         android:layout_height="wrap_content"
-                        android:text="@string/decrease"
-                        android:layout_width="50dp"/>
+                        android:text="@string/decrease_military_1"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"/>
 
                     <TextView
-                        android:text=""
-                        android:layout_width="25dp"
+                        android:text="@string/init_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:gravity="center"
                         android:id="@+id/sm_unit_val" />
 
-
                     <Button
                         android:id="@+id/increase_sm_units"
-                        android:text="@string/increase"
-                        android:layout_width="50dp"/>
+                        android:text="@string/increase_military_1"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
 
                     <TextView
                         android:text="@string/sm_units"
-                        android:id="@+id/sm_unit_label" />
-                </GridLayout>
+                        android:id="@+id/sm_unit_label"
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+                <!-- Sm. Unit Chooser END -->
 
-                <!--Med Units Chooser-->
-                <GridLayout
-                    android:layout_gravity="fill_vertical"
-                    android:columnCount="4"
-                    android:rowCount="1">
+                <!-- Med. Unit Chooser START -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="4">
 
                     <Button
                         android:id="@+id/decrease_med_units"
                         android:layout_height="wrap_content"
-                        android:text="@string/decrease"
-                        android:layout_width="50dp"/>
+                        android:text="@string/decrease_military_2"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"/>
 
                     <TextView
-                        android:text=""
-                        android:layout_width="25dp"
+                        android:text="@string/init_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:gravity="center"
                         android:id="@+id/med_unit_val" />
 
 
                     <Button
                         android:id="@+id/increase_med_units"
-                        android:text="@string/increase"
-                        android:layout_width="50dp"/>
-
+                        android:text="@string/increase_military_2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
                     <TextView
                         android:text="@string/med_units"
-                        android:id="@+id/med_unit_label" />
-                </GridLayout>
+                        android:id="@+id/med_unit_label"
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
 
-                <!--Lg Units Chooser-->
-                <GridLayout
-                    android:layout_gravity="fill_vertical"
-                    android:columnCount="4"
-                    android:rowCount="1">
+                </LinearLayout>
+                <!-- Med. Unit Chooser END -->
+
+                <!-- Lg. Unit Chooser START -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="4">
 
                     <Button
                         android:id="@+id/decrease_lg_units"
                         android:layout_height="wrap_content"
-                        android:text="@string/decrease"
-                        android:layout_width="50dp"/>
+                        android:text="@string/decrease_military_3"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"/>
 
                     <TextView
-                        android:text=""
-                        android:layout_width="25dp"
+                        android:text="@string/init_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:gravity="center"
                         android:id="@+id/lg_unit_val" />
 
                     <Button
                         android:id="@+id/increase_lg_units"
-                        android:text="@string/increase"
-                        android:layout_width="50dp" />
+                        android:text="@string/increase_military_3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
 
                     <TextView
                         android:text="@string/lg_units"
-                        android:id="@+id/lg_unit_label" />
-                </GridLayout>
-            </GridLayout>
-        </GridLayout>
+                        android:id="@+id/lg_unit_label"
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
 
-        <!--ECONOMY LAYOUT-->
-        <GridLayout
-            android:layout_width="195dp"
-            android:layout_height="200dp"
-            android:columnCount="1"
-            android:background="@color/neutral_background"
-            android:rowCount="2">
-
-            <GridLayout
-                android:columnCount="2"
-                android:rowCount="1">
-                <TextView
-                    android:text="@string/economy"/>
-
-                <Button
-                    android:id="@+id/clear_all_economy"
-                    android:text="@string/clear" />
-
+                </LinearLayout>
+                <!-- Lg. Unit Chooser END -->
             </GridLayout>
 
+            <!--ECONOMY LAYOUT-->
             <GridLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/economyMainLayout"
                 android:columnCount="1"
-                android:rowCount="3">
+                android:background="@color/neutral_background"
+                android:rowCount="2">
 
-                <!--Subsidies Chooser-->
-                <GridLayout
-                    android:layout_gravity="fill_vertical"
-                    android:columnCount="4"
-                    android:rowCount="1">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2">
+                    <TextView
+                        android:text="@string/economy"
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/clear_all_economy"
+                        android:text="@string/clear" />
+
+                </LinearLayout>
+
+                <!-- Subsidies Chooser START -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="4">
 
                     <Button
                         android:id="@+id/decrease_social_funding"
                         android:layout_height="wrap_content"
-                        android:text="@string/decrease"
-                        android:layout_width="50dp"/>
+                        android:text="@string/decrease_economic_1"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"/>
 
                     <TextView
-                        android:text=""
-                        android:layout_width="25dp"
+                        android:text="@string/init_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:gravity="center"
                         android:id="@+id/social_funding_val" />
 
-
                     <Button
                         android:id="@+id/increase_social_funding"
-                        android:text="@string/increase"
-                        android:layout_width="50dp"/>
+                        android:text="@string/increase_economic_1"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
 
                     <TextView
                         android:text="@string/social_funding"
-                        android:id="@+id/social_funding_label" />
-                </GridLayout>
+                        android:id="@+id/subsidies_label"
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
 
-                <!--Tax Break Chooser-->
-                <GridLayout
-                    android:layout_gravity="fill_vertical"
-                    android:columnCount="4"
-                    android:rowCount="1">
+                </LinearLayout>
+                <!-- Subsidies Chooser END -->
+
+                <!-- Med. Unit Chooser START -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="4">
 
                     <Button
                         android:id="@+id/decrease_taxbreaks"
                         android:layout_height="wrap_content"
-                        android:text="@string/decrease"
-                        android:layout_width="50dp"/>
+                        android:text="@string/decrease_economic_2"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"/>
 
                     <TextView
-                        android:text=""
-                        android:layout_width="25dp"
+                        android:text="@string/init_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:gravity="center"
                         android:id="@+id/tax_break_val" />
 
                     <Button
                         android:id="@+id/increase_taxbreaks"
-                        android:text="@string/increase"
-                        android:layout_width="50dp"/>
+                        android:text="@string/increase_economic_2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
 
                     <TextView
                         android:text="@string/tax_breaks"
-                        android:id="@+id/tax_break_label" />
-                </GridLayout>
+                        android:id="@+id/tax_label"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
 
-                <!--Pay Bribe-->
-                <GridLayout
-                    android:layout_gravity="fill_horizontal"
-                    android:columnCount="3"
-                    android:rowCount="1">
+                </LinearLayout>
+                <!-- Med. Unit Chooser END -->
+
+                <!-- Lg. Unit Chooser START -->
+                <TextView
+                    android:text="@string/bribe_init_value"
+                    android:id="@+id/pay_bribe_economy_price_label"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
 
                     <Button
                         android:id="@+id/pay_bribe_economy"
                         android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:text="@string/bribe"/>
-
-                    <TextView
-                        android:text=""
-                        android:id="@+id/pay_bribe_economy_price_label" />
-                </GridLayout>
-            </GridLayout>
-        </GridLayout>
-
-        <!--POLITICAL LAYOUT-->
-        <GridLayout
-            android:layout_width="195dp"
-            android:layout_height="200dp"
-            android:columnCount="1"
-            android:background="@color/angry_background"
-            android:rowCount="2">
-
-            <GridLayout
-                android:columnCount="2"
-                android:rowCount="1">
-                <TextView
-                    android:text="@string/political"/>
-
-                <Button
-                    android:id="@+id/clear_all_political"
-                    android:text="@string/clear" />
-
+                        android:text="@string/bribe"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+                <!-- Lg. Unit Chooser END -->
             </GridLayout>
 
+        </LinearLayout>
+
+    </GridLayout>
+
+    <!-- Bottom Row -->
+    <GridLayout
+        android:rowCount="2"
+        android:columnCount="1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="2">
+
+            <!--POLITICAL LAYOUT-->
             <GridLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/politicalMainLayout"
                 android:columnCount="1"
-                android:rowCount="3">
+                android:background="@color/angry_background"
+                android:rowCount="2">
 
-                <!--Lobbyists Chooser-->
-                <GridLayout
-                    android:layout_gravity="fill_vertical"
-                    android:columnCount="4"
-                    android:rowCount="1">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2">
+                    <TextView
+                        android:text="@string/political"
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/clear_all_political"
+                        android:text="@string/clear" />
+
+                </LinearLayout>
+
+                <!-- Lobbyists Chooser START -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="4">
 
                     <Button
                         android:id="@+id/decrease_lobbyists"
                         android:layout_height="wrap_content"
-                        android:text="@string/decrease"
-                        android:layout_width="50dp"/>
+                        android:text="@string/decrease_political_1"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"/>
 
                     <TextView
-                        android:text=""
-                        android:layout_width="25dp"
+                        android:text="@string/init_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:gravity="center"
                         android:id="@+id/lobbyists_val" />
 
                     <Button
                         android:id="@+id/increase_lobbyists"
-                        android:text="@string/increase"
-                        android:layout_width="50dp"/>
+                        android:text="@string/increase_political_1"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
 
                     <TextView
                         android:text="@string/lobbyists"
-                        android:id="@+id/arts_funding_label" />
-                </GridLayout>
+                        android:id="@+id/lobbyists_label"
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
 
-                <!--Politican Salary Chooser-->
-                <GridLayout
-                    android:layout_gravity="fill_vertical"
-                    android:columnCount="4"
-                    android:rowCount="1">
+                </LinearLayout>
+                <!-- Lobbyists Chooser END -->
+
+                <!-- Politican Salaries Chooser START -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="4">
 
                     <Button
                         android:id="@+id/decrease_politician_salary"
                         android:layout_height="wrap_content"
-                        android:text="@string/decrease"
-                        android:layout_width="50dp"/>
+                        android:text="@string/decrease_political_2"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"/>
 
                     <TextView
-                        android:text=""
-                        android:layout_width="25dp"
+                        android:text="@string/init_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:gravity="center"
                         android:id="@+id/politicial_salary_val" />
 
-
                     <Button
                         android:id="@+id/increase_politician_salary"
-                        android:text="@string/increase"
-                        android:layout_width="50dp"/>
+                        android:text="@string/increase_political_2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
 
                     <TextView
                         android:text="@string/politician_salary"
-                        android:id="@+id/politican_salary_label" />
-                </GridLayout>
+                        android:id="@+id/politician_salaries_label"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
 
-                <!--Pay Bribe-->
-                <GridLayout
-                    android:layout_gravity="fill_horizontal"
-                    android:columnCount="3"
-                    android:rowCount="1">
+                </LinearLayout>
+                <!-- Politician Salary Chooser END -->
+
+                <!-- Pay Bribe Chooser START -->
+                <TextView
+                    android:text="@string/bribe_init_value"
+                    android:id="@+id/pay_bribe_political_price_label"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
 
                     <Button
                         android:id="@+id/pay_bribe_political"
                         android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:text="@string/bribe"/>
-
-                    <TextView
-                        android:text=""
-                        android:id="@+id/pay_bribe_political_price_label" />
-                </GridLayout>
-            </GridLayout>
-        </GridLayout>
-
-        <!--SOCIAL LAYOUT-->
-        <GridLayout
-            android:layout_width="195dp"
-            android:layout_height="200dp"
-            android:columnCount="1"
-            android:background="@color/rebellious_background"
-            android:rowCount="2">
-
-            <GridLayout
-                android:columnCount="2"
-                android:rowCount="1">
-                <TextView
-                    android:text="@string/social"/>
-
-                <Button
-                    android:id="@+id/clear_all_social"
-                    android:text="@string/clear" />
-
+                        android:text="@string/bribe"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+                <!-- Bribe Political Chooser END -->
             </GridLayout>
 
+            <!-- SOCIAL LAYOUT-->
             <GridLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id = "@+id/socialMainLayout"
                 android:columnCount="1"
-                android:rowCount="3">
+                android:background="@color/rebellious_background"
+                android:rowCount="2">
 
-                <!--Welfare Chooser-->
-                <GridLayout
-                    android:layout_gravity="fill_vertical"
-                    android:columnCount="4"
-                    android:rowCount="1">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2">
+                    <TextView
+                        android:text="@string/social"
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/clear_all_social"
+                        android:text="@string/clear" />
+
+                </LinearLayout>
+
+                <!-- Sm. Unit Chooser START -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="4">
 
                     <Button
                         android:id="@+id/decrease_welfare"
                         android:layout_height="wrap_content"
-                        android:text="@string/decrease"
-                        android:layout_width="50dp"/>
+                        android:text="@string/decrease_social_1"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"/>
 
                     <TextView
-                        android:text=""
-                        android:layout_width="25dp"
+                        android:text="@string/init_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:gravity="center"
                         android:id="@+id/welfare_val" />
 
-
                     <Button
                         android:id="@+id/increase_welfare"
-                        android:text="@string/increase"
-                        android:layout_width="50dp"/>
+                        android:text="@string/increase_social_1"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
 
                     <TextView
                         android:text="@string/welfare"
-                        android:id="@+id/welfare_label" />
-                </GridLayout>
+                        android:id="@+id/welfare_label"
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+                <!-- Sm. Unit Chooser END -->
 
-                <!--Education Chooser-->
-                <GridLayout
-                    android:layout_gravity="fill_vertical"
-                    android:columnCount="4"
-                    android:rowCount="1">
+                <!-- Med. Unit Chooser START -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="4">
 
                     <Button
                         android:id="@+id/decrease_education"
                         android:layout_height="wrap_content"
-                        android:text="@string/decrease"
-                        android:layout_width="50dp"/>
+                        android:text="@string/decrease_social_2"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"/>
 
                     <TextView
-                        android:text=""
-                        android:layout_width="25dp"
+                        android:text="@string/init_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:gravity="center"
                         android:id="@+id/education_val" />
 
 
                     <Button
                         android:id="@+id/increase_education"
-                        android:text="@string/increase"
-                        android:layout_width="50dp"/>
-
+                        android:text="@string/increase_social_2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
                     <TextView
                         android:text="@string/education"
-                        android:id="@+id/education_label" />
-                </GridLayout>
+                        android:id="@+id/education_label"
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+                <!-- Med. Unit Chooser END -->
             </GridLayout>
-        </GridLayout>
+
+        </LinearLayout>
 
     </GridLayout>
+
+
 
     <!--PERSONAL GRID LAYOUT-->
     <GridLayout
         android:layout_gravity="fill_vertical"
-        android:columnCount="5"
-        android:rowCount="1">
+        android:layout_width="match_parent"
+        android:columnCount="6"
+        android:rowCount="1"
+        android:layout_height="wrap_content">
 
         <Button
             android:id="@+id/decrease_personal_salary"
@@ -437,8 +582,8 @@
             android:text="@string/decrease_salary"/>
 
         <TextView
-            android:text=""
-            android:layout_width="25dp"
+            android:text="@string/init_personal"
+            android:layout_width="wrap_content"
             android:gravity="center"
             android:id="@+id/personal_salary_val" />
 
@@ -452,9 +597,16 @@
             android:id="@+id/personal_salary_label" />
 
         <Button
-            android:id="@+id/restart"
+            android:id="@+id/nextday"
             android:layout_width="wrap_content"
-            android:text="@string/restart"/>
+            android:text="@string/nextday"/>
+        <TextView
+            android:text="@string/init_value"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp"
+            android:id="@+id/personal_salary_total_val" />
     </GridLayout>
 
-</GridLayout>
+</LinearLayout>

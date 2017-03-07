@@ -1,41 +1,59 @@
 <resources>
     <string name="app_name">World Builder</string>
+    <string name="init_value">0</string>
+    <string name="bribe_init_value">1000</string>
 
     <!--Generics-->
-    <string name="increase">inc</string>
-    <string name="decrease">dec</string>
     <string name="clear">clear</string>
     <string name="bribe">PAY BRIBE!</string>
-    <string name="restart">restart</string>
+    <string name="nextday">next year</string>
 
     <!--Military-->
-    <string name="military">Military</string>
-    <string name="sm_units">sm. units</string>
-    <string name="med_units">med. units</string>
-    <string name="lg_units">lg. units</string>
-    <string name="gotowar">GO TO WAR!</string>
+    <string name="increase_military_1">+10</string>
+    <string name="decrease_military_1">-10</string>
+    <string name="increase_military_2">+20</string>
+    <string name="decrease_military_2">-20</string>
+    <string name="increase_military_3">+30</string>
+    <string name="decrease_military_3">-30</string>
+    <string name="military"><b>Military</b></string>
+    <string name="sm_units"><b>sm. units</b></string>
+    <string name="med_units"><b>med. units</b></string>
+    <string name="lg_units"><b>lg. units</b></string>
 
     <!--Economic-->
-    <string name="economy">Economy</string>
-    <string name="social_funding">subsidies</string>
-    <string name="tax_breaks">tax breaks</string>
+    <string name="increase_economic_1">+15</string>
+    <string name="decrease_economic_1">-15</string>
+    <string name="increase_economic_2">+25</string>
+    <string name="decrease_economic_2">-25</string>
+    <string name="economy"><b>Economy</b></string>
+    <string name="social_funding"><b>subsidies</b></string>
+    <string name="tax_breaks"><b>tax breaks</b></string>
 
 
     <!--Political-->
-    <string name="political">Political</string>
-    <string name="lobbyists">lobbyists</string>
-    <string name="politician_salary">politician\nsalary</string>
+    <string name="increase_political_1">+15</string>
+    <string name="decrease_political_1">-15</string>
+    <string name="increase_political_2">+25</string>
+    <string name="decrease_political_2">-25</string>
+    <string name="political"><b>Political</b></string>
+    <string name="lobbyists"><b>lobbyists</b></string>
+    <string name="politician_salary"><b>politician\nsalary</b></string>
 
 
     <!--Social-->
-    <string name="social">Social</string>
-    <string name="welfare">welfare</string>
-    <string name="education">education</string>
+    <string name="increase_social_1">+15</string>
+    <string name="decrease_social_1">-15</string>
+    <string name="increase_social_2">+25</string>
+    <string name="decrease_social_2">-25</string>
+    <string name="social"><b>Social</b></string>
+    <string name="welfare"><b>welfare</b></string>
+    <string name="education"><b>education</b></string>
 
     <!--Personal-->
-    <string name="personal">personal\nsalary</string>
-    <string name="increase_salary">+1000</string>
-    <string name="decrease_salary">-1000</string>
+    <string name="personal"><b>personal\nsalary</b></string>
+    <string name="init_personal">300</string>
+    <string name="increase_salary">+300</string>
+    <string name="decrease_salary">-300</string>
 
 
 </resources>
